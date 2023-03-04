@@ -51,15 +51,15 @@ export const Registro = (props) => {
       title: "¡Felicitaciones!",
       text: "Te has registrado con éxito",
       icon: "success",
-      confirmButtonColor: "#1b1b1b",
+      confirmButtonColor: "#dc3545",
     });
   };
 
   return (
     <div className="container-fluid">
-      <div className="container p-2 w-75 bg-secondary mt-3 mb-3 rounded shadow">
+      <div className="container p-2 w-75 bg-danger mt-3 mb-3 rounded shadow">
         <div className="row align-items-stretch">
-          <div className="bg-registro col bg-dark d-none d-lg-block col-ms-5 col-lg-5 col-xl-6 rounded">
+          <div className="bg-registro col bg-secondary d-none d-lg-block col-ms-5 col-lg-5 col-xl-6 rounded">
             <img
               className="img-registro mt-5"
               src={""}
@@ -224,7 +224,7 @@ export const Registro = (props) => {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-dark m-2"
+                  className="btn btn-danger m-2"
                   onClick={async (event) => {
                     showAlert(event.target.value);
                   }}
