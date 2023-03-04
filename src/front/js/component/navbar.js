@@ -6,8 +6,14 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-danger pt-0 pb-0">
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand ms-5">
-          <img src={Pokemon} alt="" width="100" height="80" className="img-fluid" />
+        <Link to="/" className="navbar-brand ms-3">
+          <img
+            src={Pokemon}
+            alt=""
+            width="80"
+            height="80"
+            className="img-fluid"
+          />
         </Link>
         <button
           className="navbar-toggler"
