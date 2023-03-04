@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Context } from "../store/appContext";
+import PokebolaRegistro from "../../img/pokebola-registro.png";
 
 export const Registro = (props) => {
   const { store, actions } = useContext(Context);
@@ -62,7 +63,7 @@ export const Registro = (props) => {
           <div className="bg-registro col bg-secondary d-none d-lg-block col-ms-5 col-lg-5 col-xl-6 rounded">
             <img
               className="img-registro mt-5"
-              src={""}
+              src=""
               alt=""
               style={{ height: "250px", width: "300px" }}
               align="right"
@@ -85,7 +86,7 @@ export const Registro = (props) => {
                 fontWeight: "400",
               }}
             >
-              La mejor experiencia de tu vida
+              <img src={PokebolaRegistro} width="30" height="30" className="img-fluid me-2"></img>La mejor experiencia de tu vida<img src={PokebolaRegistro} width="30" height="30" className="img-fluid ms-1"></img>
             </h6>
 
             {/* <h6 className="fw-bold text-center py-2">

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Context } from "../store/appContext";
+import Pokebola from "../../img/pokebola.png";
 
 export const Login = (props) => {
   const { store, actions } = useContext(Context);
@@ -58,7 +59,7 @@ export const Login = (props) => {
                 fontWeight: "400",
               }}
             >
-              ✨ Bienvenido a tu mejor lugar ✨
+              <img src={Pokebola} width="30" height="30" className="img-fluid me-2"></img>Bienvenido a tu mejor lugar <img src={Pokebola} width="30" height="30" className="img-fluid ms-1"></img>
             </h6>
             {store.tokenUserLogin &&
             store.tokenUserLogin !== "" &&
