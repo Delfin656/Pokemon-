@@ -4,6 +4,8 @@ import PokeAPI from "../../img/poke-api.png";
 export const Cards = () => {
   const [pokemon, setPokemon] = useState([]);
 
+  let search = "";
+
   async function getPokemon() {
     try {
       const response = await fetch("https://pokeapi.co/api/v2/pokemon/${id}");
@@ -36,9 +38,9 @@ export const Cards = () => {
         <div className="input-pokemon d-flex justify-content-center">
           <input
             type="search"
-            className="form-control mt-3"
-            placeholder="Busca tu pokemon "
-            id="inputEmail4"
+            className="form-control-cards mt-3 p-2"
+            placeholder="Buscar pokemon "
+            id="inputSearch"
             aria-describedby="emailHelp"
             value=""
             onChange=""
