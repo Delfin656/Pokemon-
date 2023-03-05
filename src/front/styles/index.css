@@ -4,3 +4,8 @@
 .poke-home {
   border-radius: 20px;
 }
+
+/* input de la vista card */
+.form-control {
+  width: 300px;
+}
