@@ -11,7 +11,11 @@ export const Registro = (props) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+
+
   const navigate = useNavigate();
+
+
   async function handleSubmit(event) {
     event.preventDefault();
     actions.registro(nombre, apellido, email, phone, password);
@@ -220,7 +224,7 @@ export const Registro = (props) => {
                     className="form-check-input me-2"
                     id="exampleCheck1"
                   ></input>
-                  <label className="form-check-label" for="exampleCheck1">
+                  <label className="form-check-label" htmlFor="exampleCheck1">
                   Haz leído y aceptas los <strong>Términos y Condiciones</strong>
                   </label>
                 </div>

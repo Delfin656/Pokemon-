@@ -30,7 +30,7 @@ export const Login = (props) => {
       store.tokenUserLogin !== "" &&
       store.tokenUserLogin !== undefined
     ) {
-      navigate("/recipes");
+      navigate("/pokemones");
     }
   }, [store.tokenUserLogin]);
 
@@ -69,7 +69,7 @@ export const Login = (props) => {
               <form action="#" onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label htmlFor="inputEmail4" className="form-label">
-                    <i class="fa-solid fa-user m-2"></i>
+                    <i className="fa-solid fa-user m-2"></i>
                     Email
                   </label>
                   <input
@@ -90,7 +90,7 @@ export const Login = (props) => {
                 </div>
                 <div className="mb-1">
                   <label htmlFor="inputPassword4" className="form-label">
-                    <i class="fa-solid fa-key m-2"></i>
+                    <i className="fa-solid fa-key m-2"></i>
                     Contraseña
                   </label>
                   <input
