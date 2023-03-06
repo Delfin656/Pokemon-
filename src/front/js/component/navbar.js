@@ -73,19 +73,37 @@ export const Navbar = () => {
                 </Link>
               </>
             ) : (
-              <button
-                className="button-login btn btn-light me-2 p-2 "
-                type="submit"
-                onClick={() => {
-                  actions.logout();
-                  navigate("/");
-                }}
-                style={{
-                  borderRadius: "8px",
-                }}
-              >
-                Cerrar Sesión
-              </button>
+              <>
+                <Link to="/favoritos"
+                  style={{ color: "Black", textDecoration: "none" }} >
+                  <button
+                    className="button-login btn btn-light me-2 p-2 "
+                    type="submit"
+                    onClick={() => {
+                      
+                      navigate("/");
+                    }}
+                    style={{
+                      borderRadius: "8px",
+                    }}
+                  >
+                    Favoritos
+                  </button>
+                </Link>
+                <button
+                  className="button-login btn btn-light me-2 p-2 "
+                  type="submit"
+                  onClick={() => {
+                    actions.logout();
+                    navigate("/");
+                  }}
+                  style={{
+                    borderRadius: "8px",
+                  }}
+                >
+                  Cerrar Sesión
+                </button>
+              </>
             )}
           </div>
         </div>
