@@ -1,8 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Pokemon from "../../img/pokemon-logo-transparente.png";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-danger pt-0 pb-0">
       <div className="container-fluid">
@@ -30,43 +34,59 @@ export const Navbar = () => {
           className="collapse navbar-collapse justify-content-between"
           id="navbarSupportedContent"
         >
-          <div></div>
           <ul className="navbar-nav mb-2 mb-lg-0"></ul>
 
           <div>
-            <div>❤ {100}</div>
-            <Link
-              to="/login"
-              style={{
-                color: "Black",
-                textDecoration: "none",
-              }}
-            >
+            {!store.tokenUserLogin ? (
+              <>
+                <Link
+                  to="/login"
+                  style={{
+                    color: "Black",
+                    textDecoration: "none",
+                  }}
+                >
+                  <button
+                    className="button-login btn btn-light me-2 p-2 "
+                    type="submit"
+                    style={{
+                      borderRadius: "8px",
+                    }}
+                  >
+                    Iniciar Sesión
+                  </button>
+                </Link>
+
+                <Link
+                  to="/registro"
+                  style={{ color: "Black", textDecoration: "none" }}
+                >
+                  <button
+                    className="button-registro btn btn-light p-2 me-3"
+                    type="submit"
+                    style={{
+                      borderRadius: "8px",
+                    }}
+                  >
+                    Registrate
+                  </button>
+                </Link>
+              </>
+            ) : (
               <button
                 className="button-login btn btn-light me-2 p-2 "
                 type="submit"
+                onClick={() => {
+                  actions.logout();
+                  navigate("/");
+                }}
                 style={{
                   borderRadius: "8px",
                 }}
               >
-                Iniciar Sesión
+                Cerrar Sesión
               </button>
-            </Link>
-
-            <Link
-              to="/registro"
-              style={{ color: "Black", textDecoration: "none" }}
-            >
-              <button
-                className="button-registro btn btn-light p-2 me-3"
-                type="submit"
-                style={{
-                  borderRadius: "8px",
-                }}
-              >
-                Registrate
-              </button>
-            </Link>
+            )}
           </div>
         </div>
       </div>
