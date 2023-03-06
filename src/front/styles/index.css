@@ -9,3 +9,11 @@
 .form-control-cards {
   width: 300px;
 }
+
+
+/* card de detalles */
+.card-details{
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+}

@@ -34,6 +34,7 @@ export const Navbar = () => {
           <ul className="navbar-nav mb-2 mb-lg-0"></ul>
 
           <div>
+            <div>❤ {100}</div>
             <Link
               to="/login"
               style={{
