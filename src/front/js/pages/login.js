@@ -29,9 +29,9 @@ export const Login = (props) => {
       store.tokenUserLogin &&
       store.tokenUserLogin !== "" &&
       store.tokenUserLogin !== undefined
-    ) {
+    )
       navigate("/pokemones");
-    }
+      
   }, [store.tokenUserLogin]);
 
   return (
@@ -59,7 +59,19 @@ export const Login = (props) => {
                 fontWeight: "400",
               }}
             >
-              <img src={Pokebola} width="30" height="30" className="img-fluid me-2"></img>Bienvenido a tu mejor lugar <img src={Pokebola} width="30" height="30" className="img-fluid ms-1"></img>
+              <img
+                src={Pokebola}
+                width="30"
+                height="30"
+                className="img-fluid me-2"
+              ></img>
+              Bienvenido a tu mejor lugar{" "}
+              <img
+                src={Pokebola}
+                width="30"
+                height="30"
+                className="img-fluid ms-1"
+              ></img>
             </h6>
             {store.tokenUserLogin &&
             store.tokenUserLogin !== "" &&

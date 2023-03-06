@@ -62,7 +62,7 @@ def registro():
 
 #login
 
-@api.route("/login", methods=["GET","POST"])
+@api.route("/login", methods=["POST"])
 def create_token():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
@@ -74,5 +74,5 @@ def create_token():
             return 'El usuario no esta registrado en la PokeDex', 404
         else:
             access_token = create_access_token(identity=email)
-            return jsonify({"tokenUserLogin": access_token })
+            return jsonify({"access_token": access_token })
 
