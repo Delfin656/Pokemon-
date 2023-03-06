@@ -12,9 +12,7 @@ export const Registro = (props) => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
-
   const navigate = useNavigate();
-
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -64,15 +62,18 @@ export const Registro = (props) => {
     <div className="container-fluid">
       <div className="container p-2 w-75 bg-danger mt-3 mb-3 rounded shadow">
         <div className="row align-items-stretch">
-          <div className="bg-registro col d-none d-lg-block col-ms-5 col-lg-5 col-xl-6 rounded"
-          style={{ background: "#adb5bd" }}>
-            <img
-              className="img-registro mt-5"
-              src=""
-              alt=""
-              style={{ height: "250px", width: "300px" }}
-              align="right"
-            />
+          <div
+            className="bg-registro col d-none d-lg-block col-ms-5 col-lg-5 col-xl-6 rounded"
+            style={{ background: "#adb5bd" }}
+          >
+            <div className="img-registro d-flex m-5">
+              <img
+                src={PokebolaRegistro}
+                alt=""
+                style={{ height: "500px", width: "500px" }}
+                align="right"
+              />
+            </div>
           </div>
           <div className="col bg-white p-5 rounded-end">
             <h2
@@ -91,7 +92,19 @@ export const Registro = (props) => {
                 fontWeight: "400",
               }}
             >
-              <img src={PokebolaRegistro} width="30" height="30" className="img-fluid me-2"></img>La mejor experiencia de tu vida<img src={PokebolaRegistro} width="30" height="30" className="img-fluid ms-1"></img>
+              <img
+                src={PokebolaRegistro}
+                width="30"
+                height="30"
+                className="img-fluid me-2"
+              ></img>
+              La mejor experiencia de tu vida
+              <img
+                src={PokebolaRegistro}
+                width="30"
+                height="30"
+                className="img-fluid ms-1"
+              ></img>
             </h6>
 
             {/* <h6 className="fw-bold text-center py-2">
@@ -225,7 +238,8 @@ export const Registro = (props) => {
                     id="exampleCheck1"
                   ></input>
                   <label className="form-check-label" htmlFor="exampleCheck1">
-                  Haz leído y aceptas los <strong>Términos y Condiciones</strong>
+                    Haz leído y aceptas los{" "}
+                    <strong>Términos y Condiciones</strong>
                   </label>
                 </div>
                 <button
