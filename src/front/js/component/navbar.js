@@ -74,20 +74,21 @@ export const Navbar = () => {
               </>
             ) : (
               <>
-                <Link to="/favoritos"
-                  style={{ color: "Black", textDecoration: "none" }} >
+                <Link
+                  to="/favoritos"
+                  style={{ color: "Black", textDecoration: "none" }}
+                >
                   <button
                     className="button-login btn btn-light me-2 p-2 "
                     type="submit"
-                    onClick={() => {
-                      
-                      navigate("/");
-                    }}
                     style={{
                       borderRadius: "8px",
                     }}
                   >
                     Favoritos
+                    <span className="badge bg-danger ms-1">
+                      {store.favorites.length}
+                    </span>
                   </button>
                 </Link>
                 <button
