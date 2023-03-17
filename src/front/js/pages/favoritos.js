@@ -13,7 +13,7 @@ export const Favoritos = () => {
               <div className="card">
                 <div className="card-body text-center">
                   <h5>{pokemon}</h5>
-                  <img src={pokemon} alt={pokemon} />
+                  {/* <img src={pokemon} alt={pokemon} /> */}
 
                   <div>
                     <Link to={`/single/${pokemon}`}>
@@ -33,7 +33,7 @@ export const Favoritos = () => {
         })}
       </div>
 
-      <div className="btn-backPokemones d-flex justify-content-center">
+      <div className="btn-backPokemones d-flex justify-content-center mt-3">
         <Link to="/pokemones">
           <button type="button" className="btn btn-secondary">
             Back to pokemones
