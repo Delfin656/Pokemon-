@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-danger pt-0 pb-0">
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand ms-3">
+        {/* <Link to="/" className="navbar-brand ms-3"> */}
           <img
             src={Pokemon}
             alt=""
@@ -18,7 +18,7 @@ export const Navbar = () => {
             height="80"
             className="img-fluid"
           />
-        </Link>
+        {/* </Link> */}
         <button
           className="navbar-toggler"
           type="button"

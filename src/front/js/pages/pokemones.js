@@ -55,29 +55,6 @@ export const Pokemones = () => {
     );
   }
 
-  // async function handleSubmit(event){
-  //   event.preventDefault();
-  //   actions.searchPokemon(pokemon);
-  // };
-
-  // async function getPokemon() {
-  //   try {
-  //     const response = await fetch("https://pokeapi.co/api/v2/pokemon/${id}");
-  //     if (!response.ok) {
-  //       new error("Paso algo malo en el getPokemon");
-  //     }
-  //     const body = await response.json();
-
-  //     setPokemon(body.abilities);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   // getPokemon();
-  //   searchPokemon()
-  // }, []);
 
   useEffect(() => {
     async function getPokemones() {
