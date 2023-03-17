@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
        ///////Funcion de registro
 
-       registro: async (nombre, apellido, email, phone, password) => {
+      registro: async (nombre, apellido, email, phone, password) => {
         const store = getStore();
         try {
           const response = await fetch(process.env.BACKEND_URL + "/api/registro", {
