@@ -84,7 +84,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             }),
           });
           if (!response.ok) {
-            alert("Error iniciando sesión");
+            // alert("Error iniciando sesión");
             return false;
           }
           //alert("Haz iniciado sesión exitosamente");

@@ -12,9 +12,40 @@ export const Login = (props) => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    actions.login(email, password);
+    const response = await actions.login(email, password);
+    if(
+      response
+    ) {
+      Swal.fire({
+        title: "¡Bienvenido!",
+        text: "Inicio de sesión exitoso",
+        icon: "success",
+        confirmButtonColor: "#dc3545",
+      });
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Inicio de sesión exitoso",
+        icon: "error",
+        confirmButtonColor: "#dc3545",
+      });
+    }
   }
 
+  // const ingreso = async () => {
+  //   console.log(email, password);
+  //   // if (email.trim() == "") {
+  //   //   Swal("¡Ups!", "Debes colocar un Email");
+  //   // } else if (password.trim() == "") {
+  //   //   Swal("¡Ups!", "Debes colocar tu contraseña");
+  //   // } else {
+  //   //   let success = await login(email, password);
+  //   //   if (success == true) {
+  //   //     Swal("¡Bienvenido!", "Inicio de sesión exitoso", "success");
+  //   //   }
+  //   //   Swal("Email o contraseña invalidos", "Intenta de nuevo", "error");
+  //   // }
+  // };
   const showAlert = () => {
     Swal.fire({
       title: "¡Bienvenido!",
@@ -31,7 +62,6 @@ export const Login = (props) => {
       store.tokenUserLogin !== undefined
     )
       navigate("/pokemones");
-      
   }, [store.tokenUserLogin]);
 
   return (
@@ -139,27 +169,9 @@ export const Login = (props) => {
                   <button
                     type="submit"
                     className="btn btn-danger"
-                    onClick={async (event) => {
-                      showAlert(event.target.value);
-
-                      // console.log(email);
-                      // if (email.trim() == "") {
-                      //   Swal("¡Ups!", "Debes colocar un Email");
-                      // } else if (password.trim() == "") {
-                      //   Swal("¡Ups!", "Debes colocar tu contraseña");
-                      // } else {
-                      //   let success = await login(email, password);
-                      //   if (success == true) {
-                      //     Swal("¡Bienvenido!", "Inicio de sesión exitoso", "success");
-
-                      //   }
-                      //   Swal(
-                      //     "Email o contraseña invalidos",
-                      //     "Intenta de nuevo",
-                      //     "error"
-                      //   );
-                      // }
-                    }}
+                    // onClick={() => {
+                    //   ingreso();
+                    // }}
                     style={{
                       border: "2px solid black",
                       borderRadius: "8px",
